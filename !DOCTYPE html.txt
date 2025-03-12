@@ -37,7 +37,7 @@
 
 <footer>
 
-<p>&copy; 2025 Your Name</p>
+<p>&copy; 2025 RICHARD LEATILE GABANA</p>
 
 </footer>
 
