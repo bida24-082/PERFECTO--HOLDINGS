@@ -10,49 +10,76 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Timeline Styles */
-    .timeline {
-      position: relative;
-      padding-left: 50px;
-      list-style: none;
-      margin: 30px 0;
+    /* Construction-Themed Background */
+    body {
+      background-color: #f8f5f1; /* Light sand color */
+      background-image: 
+        url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="%23f8f5f1"/><path d="M20 20v60h60V20H20z" stroke="%23d1c7b7" stroke-width="0.5" fill="none" opacity="0.3"/></svg>');
+      background-attachment: fixed;
     }
+    
+    /* Main Content Area */
+    main {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      border: 1px solid #d1c7b7;
+    }
+    
+    /* Construction Color Palette */
+    :root {
+      --concrete: #f2f2f2;
+      --brick: #b22222;
+      --sand: #d1c7b7;
+      --wood: #8b4513;
+      --metal: #4682b4;
+    }
+    
+    /* Headings */
+    h1, h2, h3, h4 {
+      color: var(--brick);
+      border-bottom: 2px solid var(--sand);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+    
+    /* Timeline Styling */
     .timeline:before {
-      content: '';
-      position: absolute;
-      left: 15px;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: #4CAF50;
-    }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 30px;
+      background: var(--wood);
     }
     .timeline-year {
-      position: absolute;
-      left: -50px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #4CAF50;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      box-shadow: 0 0 0 4px white, 0 0 0 6px #4CAF50;
+      background: var(--brick);
+      box-shadow: 0 0 0 4px white, 0 0 0 6px var(--brick);
     }
     .timeline-content {
-      padding: 15px;
-      background: #f8f9fa;
-      border-radius: 8px;
-      border-left: 3px solid #4CAF50;
+      background-color: var(--concrete);
+      border-left: 3px solid var(--metal);
     }
-    .timeline-content h5 {
-      margin-top: 0;
-      color: #4CAF50;
+    
+    /* Cards & List Groups */
+    .card, .list-group-item {
+      background-color: var(--concrete);
+      border: 1px solid var(--sand);
+    }
+    
+    /* Buttons */
+    .btn-primary {
+      background-color: var(--brick);
+      border-color: var(--wood);
+    }
+    .btn-primary:hover {
+      background-color: var(--wood);
+    }
+    
+    /* Navigation */
+    .navbar-dark {
+      background-color: var(--wood) !important;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--wood);
     }
   </style>
 </head>
@@ -61,7 +88,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          Perfect Moulds Investments
+          <i class="bi bi-building"></i> Perfect Moulds Investments
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
@@ -97,7 +124,7 @@
       <p class="lead">Building Foundations, Empowering Communities</p>
       <p>Established in 2007 Bobonong village, Perfect Moulds Investments has grown into a trusted supplier of high quality construction and building materials. We specialize in providing essential products such as pillars, various types of brick, lintels, paving slabs, and more, catering for both residential and commercial projects.</p>
       
-      <!-- New Timeline Section -->
+      <!-- Timeline Section -->
       <div class="mt-5">
         <h4 class="text-center mb-4">Our Growth Timeline</h4>
         <ul class="timeline">
@@ -175,7 +202,7 @@
       </div>
     </section>
 
-    <div class="card bg-light mt-5">
+    <div class="card bg-light mt-5 border-primary">
       <div class="card-body text-center">
         <h4>Ready to start your project?</h4>
         <a href="contact.html" class="btn btn-primary btn-lg mt-3">
@@ -233,3 +260,8 @@
   </script>
 </body>
 </html>
+  
+ 
+       
+
+     
