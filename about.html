@@ -3,23 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
+  <title>About Us - Perfect Moulds Investments</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons (needed for footer icons) -->
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Timeline Styles */
+    .timeline {
+      position: relative;
+      padding-left: 50px;
+      list-style: none;
+      margin: 30px 0;
+    }
+    .timeline:before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #4CAF50;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .timeline-year {
+      position: absolute;
+      left: -50px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #4CAF50;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 0 0 4px white, 0 0 0 6px #4CAF50;
+    }
+    .timeline-content {
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 3px solid #4CAF50;
+    }
+    .timeline-content h5 {
+      margin-top: 0;
+      color: #4CAF50;
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="index.html">My Website</a>
+        <a class="navbar-brand" href="index.html">
+          Perfect Moulds Investments
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
@@ -27,7 +75,13 @@
               <a class="nav-link active" href="about.html">About</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feedback.html">Feedback</a>
             </li>
           </ul>
         </div>
@@ -36,31 +90,106 @@
   </header>
 
   <main class="container my-5">
-    <h3>ABOUT PERFECT MOULDS INVESTMENTS</h3>
+    <h1 class="mb-4">ABOUT PERFECT MOULDS INVESTMENTS</h1>
     
-    <h4>OUR JOURNEY</h4>
-    <p>Building Foundations,Empowering Communities</p>
-    <p>Established in 2007 Bobonong village,Perfect moulds investments has grown into a trusted supplier of high quality construction and building materials.We specialize in providing essential products such as pillars,various types of brick,lintels,paving slabs,and more,catering for both residential and commercial projects.</p>
+    <section class="mb-5">
+      <h2 class="mb-3">OUR JOURNEY</h2>
+      <p class="lead">Building Foundations, Empowering Communities</p>
+      <p>Established in 2007 Bobonong village, Perfect Moulds Investments has grown into a trusted supplier of high quality construction and building materials. We specialize in providing essential products such as pillars, various types of brick, lintels, paving slabs, and more, catering for both residential and commercial projects.</p>
+      
+      <!-- New Timeline Section -->
+      <div class="mt-5">
+        <h4 class="text-center mb-4">Our Growth Timeline</h4>
+        <ul class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-year">2007</div>
+            <div class="timeline-content">
+              <h5>Humble Beginnings</h5>
+              <p>Founded in Bobonong village with just 3 employees and a small workshop.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-year">2010</div>
+            <div class="timeline-content">
+              <h5>First Expansion</h5>
+              <p>Added paving slabs to our product line and doubled our workforce.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-content">
+              <h5>Quality Certification</h5>
+              <p>Received Botswana Bureau of Standards certification for our pillars.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-year">2020</div>
+            <div class="timeline-content">
+              <h5>Modern Facility</h5>
+              <p>Moved to a new 2,000 sqm production facility in Bobonong.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-content">
+              <h5>Community Impact</h5>
+              <p>Now employing 50+ local staff and supplying 100+ contractors.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-    <h5>OUR MISSION</h5>
-    <p>To deliver durable,affordable,and reliable building solutions while sopporting the growth of Bobonong and its surrounding villages.We take pride in contributing to local development by supplying materials that lay the foundation for stonger,saferand more sustainable structures.</p>
+    <section class="mb-5">
+      <h2 class="mb-3">OUR MISSION</h2>
+      <p>To deliver durable, affordable, and reliable building solutions while supporting the growth of Bobonong and its surrounding villages. We take pride in contributing to local development by supplying materials that lay the foundation for stronger, safer and more sustainable structures.</p>
+    </section>
 
-    <h6>WHY CHOOSE US?</h6>
-    <p>1.Wide range of products-From pillars to paving,we offer everything needed for construction and landscape.</p>
-    <p>2.Local expertise-Over 17 years of serving Bobonong and neighboring communities.</p>
-    <p>3.Quality and Trust-Commited to supplying materialsthat meet industry standards.</p>
-    <p>4.Community focus-Proudly supporting local builders,contractors and home owners</p>
+    <section class="mb-5">
+      <h2 class="mb-3">WHY CHOOSE US?</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item d-flex align-items-center">
+              <i class="bi bi-check-circle-fill text-success me-3"></i>
+              <span>Wide range of products - From pillars to paving, we offer everything needed for construction and landscape.</span>
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+              <i class="bi bi-check-circle-fill text-success me-3"></i>
+              <span>Local expertise - Over 17 years of serving Bobonong and neighboring communities.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item d-flex align-items-center">
+              <i class="bi bi-check-circle-fill text-success me-3"></i>
+              <span>Quality and Trust - Committed to supplying materials that meet industry standards.</span>
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+              <i class="bi bi-check-circle-fill text-success me-3"></i>
+              <span>Community focus - Proudly supporting local builders, contractors and home owners.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <p>At Perfect Moulds Investments,we dont just sell materials -we help build dreams,one brick at a time.</p>
-    <p>Visit us in Bobonong village-Your trusted partner in consrtuction!</p>
+    <div class="card bg-light mt-5">
+      <div class="card-body text-center">
+        <h4>Ready to start your project?</h4>
+        <a href="contact.html" class="btn btn-primary btn-lg mt-3">
+          <i class="bi bi-chat-dots"></i> Get a Quote Today
+        </a>
+      </div>
+    </div>
   </main>
 
-  <!-- Updated Footer (matches index.html behavior) -->
   <footer class="bg-dark text-white py-3">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h5>Get in touch:</h5>
+          <h5>Contact Us</h5>
           <ul class="list-unstyled">
             <li><i class="bi bi-telephone"></i> +267 75471050</li>
             <li><i class="bi bi-phone"></i> +267 72182234</li>
@@ -79,8 +208,8 @@
   <!-- Bootstrap JS and dependencies -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
-  <!-- Same Footer Script as index.html -->
+  
+  <!-- Footer Scroll Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const footer = document.querySelector('footer');
