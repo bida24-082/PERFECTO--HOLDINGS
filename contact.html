@@ -1,99 +1,231 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Contact Us</title>
-
-   <!-- Bootstrap CSS -->
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<link rel="stylesheet" href="styles.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Perfect Moulds Investments</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Consistent with your about page style */
+    body {
+      background-color: #f8f4e9;
+      background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M30 30L60 0" stroke="%23e3c9aa" stroke-width="0.3" stroke-dasharray="2,2"/></svg>');
+    }
+    
+    main {
+      background-color: rgba(255, 253, 245, 0.95);
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+      border: 1px solid #d7b89c;
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+    
+    .contact-card {
+      border-left: 4px solid #c45a12;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .map-container {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .btn-primary {
+      background-color: #c45a12;
+      border-color: #a35718;
+    }
+    
+    .btn-primary:hover {
+      background-color: #a35718;
+    }
+    
+    .contact-icon {
+      font-size: 1.5rem;
+      color: #c45a12;
+      margin-right: 10px;
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a35718;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="bi bi-building"></i> Perfect Moulds Investments
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feedback.html">Feedback</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-<header>
+  <main class="container my-5">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bold">Contact Perfect Moulds</h1>
+      <p class="lead">We're here to help with your construction material needs</p>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Contact Information -->
+      <div class="col-lg-5">
+        <div class="card h-100 contact-card">
+          <div class="card-body">
+            <h3 class="card-title mb-4"><i class="bi bi-geo-alt-fill contact-icon"></i>Our Location</h3>
+            <address class="mb-4">
+              <strong>Plot 59140</strong><br>
+              Sehena, Bobonong<br>
+              Botswana
+            </address>
+            
+            <h4 class="mb-3"><i class="bi bi-headset contact-icon"></i>Contact Details</h4>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="bi bi-telephone-fill contact-icon"></i> +267 75471050</li>
+              <li class="mb-2"><i class="bi bi-phone-fill contact-icon"></i> +267 72182234</li>
+              <li class="mb-2"><i class="bi bi-whatsapp contact-icon"></i> 76343465</li>
+              <li class="mb-2"><i class="bi bi-envelope-fill contact-icon"></i> info@perfectoinvestments.com</li>
+            </ul>
+            
+            <h4 class="mb-3 mt-4"><i class="bi bi-clock-fill contact-icon"></i>Business Hours</h4>
+            <ul class="list-unstyled">
+              <li><strong>Mon-Fri:</strong> 7:30 AM - 5:00 PM</li>
+              <li><strong>Sat:</strong> 8:00 AM - 1:00 PM</li>
+              <li><strong>Sun:</strong> Closed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Map and Quick Contact Form -->
+      <div class="col-lg-7">
+        <div class="map-container mb-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.238443283908!2d28.43191531537024!3d-22.00272648599826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDAwJzA5LjgiUyAyOMKwMjYnMDAuOCJF!5e0!3m2!1sen!2sbw!4v1620000000000!5m2!1sen!2sbw" 
+                  width="100%" 
+                  height="300" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy"></iframe>
+        </div>
+        
+        <div class="card contact-card">
+          <div class="card-body">
+            <h3 class="card-title mb-4">Quick Inquiry</h3>
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" placeholder="John Doe">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="your@email.com">
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <select class="form-select" id="subject">
+                  <option selected>Product Inquiry</option>
+                  <option>Pricing</option>
+                  <option>Delivery</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Your message..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-send-fill"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-<div class="container">
-
-<a class="navbar-brand" href="index.html">My Website</a>
-
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-
-<div class="collapse navbar-collapse" id="navbarNav">
-
-<ul class="navbar-nav">
-
-<li class="nav-item">
-
-<a class="nav-link" href="index.html">Home</a>
-
-</li>
-
-<li class="nav-item">
-
-<a class="nav-link" href="about.html">About</a>
-
-</li>
-
-<li class="nav-item">
-
-<a class="nav-link" href="contact.html">Contact</a>
-
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</nav>
-
-</header>
-
- 
-
-<main class="container my-5">
-
-<h2>Contact Us</h2>
-
-<p>CONTACT:</p>                                          <p> Our location>Plot 59140 SEHENA BOBONONG BOTSWANA<p/>
-     <p>PHONE>+267 75471050</p>                         
-     <p>SITE>+267 72182234</p>
-     <p>WhatsAPP>76343465</p>
-     <p>Email>info@perfectoinvestments.gmail.com</p>
-
-</main
-
-
-<footer>
-
-<p>&copy; 2025 RICHARD LEATILE GABANA</p>
-
-</footer>
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5>Perfect Moulds</h5>
+          <p>Quality construction materials since 2007</p>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white"><i class="bi bi-chevron-right me-1"></i> Home</a></li>
+            <li><a href="products.html" class="text-white"><i class="bi bi-chevron-right me-1"></i> Products</a></li>
+            <li><a href="contact.html" class="text-white"><i class="bi bi-chevron-right me-1"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt me-2"></i> Plot 59140, Bobonong</li>
+            <li><i class="bi bi-telephone me-2"></i> +267 75471050</li>
+            <li><i class="bi bi-envelope me-2"></i> info@perfectoinvestments.com</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-3" style="border-color: rgba(255,255,255,0.1);">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 Perfect Moulds Investments. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <!-- Bootstrap JS and dependencies -->
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script
-
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  
+  <!-- Footer Scroll Script (matches other pages) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const footer = document.querySelector('footer');
+      let lastScrollPosition = 0;
+      
+      window.addEventListener('scroll', function() {
+        const currentScrollPosition = window.scrollY;
+        
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+          footer.classList.add('show');
+        } 
+        else if (currentScrollPosition < lastScrollPosition) {
+          footer.classList.remove('show');
+        }
+        
+        lastScrollPosition = currentScrollPosition;
+      });
+    });
+  </script>
 </body>
-
 </html>
