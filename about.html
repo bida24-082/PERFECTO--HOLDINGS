@@ -10,85 +10,190 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Construction-Themed Background */
-    body {
-      background-color: #f8f5f1; /* Light sand color */
-      background-image: 
-        url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="%23f8f5f1"/><path d="M20 20v60h60V20H20z" stroke="%23d1c7b7" stroke-width="0.5" fill="none" opacity="0.3"/></svg>');
-      background-attachment: fixed;
-    }
-    
-    /* Main Content Area */
-    main {
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      border: 1px solid #d1c7b7;
-    }
-    
-    /* Construction Color Palette */
+    /* Modern Construction Theme */
     :root {
-      --concrete: #f2f2f2;
-      --brick: #b22222;
-      --sand: #d1c7b7;
-      --wood: #8b4513;
-      --metal: #4682b4;
+      --primary: #E74C3C;  /* Vibrant red for important elements */
+      --secondary: #3498DB; /* Trustworthy blue */
+      --accent: #F39C12;    /* Golden accent */
+      --light: #ECF0F1;     /* Light gray background */
+      --dark: #2C3E50;      /* Dark blue for text/nav */
+      --neutral: #95A5A6;   /* Concrete gray */
     }
     
-    /* Headings */
+    body {
+      background-color: var(--light);
+      background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none" stroke="%23BDC3C7" stroke-width="0.5" stroke-dasharray="5,5"/></svg>');
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    main {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-top: 5px solid var(--primary);
+      margin-top: 20px;
+      margin-bottom: 80px;
+    }
+    
     h1, h2, h3, h4 {
-      color: var(--brick);
-      border-bottom: 2px solid var(--sand);
+      color: var(--dark);
+      font-weight: 700;
+    }
+    
+    h1 {
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
       padding-bottom: 8px;
-      margin-bottom: 20px;
+    }
+    
+    .navbar {
+      background: linear-gradient(135deg, var(--dark), #1A252F);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    
+    .nav-link {
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      transform: translateY(-2px);
+      color: var(--accent) !important;
     }
     
     /* Timeline Styling */
-    .timeline:before {
-      background: var(--wood);
-    }
-    .timeline-year {
-      background: var(--brick);
-      box-shadow: 0 0 0 4px white, 0 0 0 6px var(--brick);
-    }
-    .timeline-content {
-      background-color: var(--concrete);
-      border-left: 3px solid var(--metal);
+    .timeline {
+      position: relative;
+      padding-left: 50px;
     }
     
-    /* Cards & List Groups */
-    .card, .list-group-item {
-      background-color: var(--concrete);
-      border: 1px solid var(--sand);
+    .timeline:before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--secondary);
+      border-radius: 2px;
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .timeline-year {
+      position: absolute;
+      left: -50px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 0 0 4px white, 0 3px 5px rgba(0,0,0,0.2);
+    }
+    
+    .timeline-content {
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-left: 3px solid var(--primary);
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-content:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    
+    /* Cards */
+    .card {
+      border: none;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    
+    .card-header {
+      background-color: var(--primary);
+      color: white;
+      font-weight: bold;
     }
     
     /* Buttons */
     .btn-primary {
-      background-color: var(--brick);
-      border-color: var(--wood);
-    }
-    .btn-primary:hover {
-      background-color: var(--wood);
+      background-color: var(--primary);
+      border: none;
+      padding: 10px 25px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
     }
     
-    /* Navigation */
-    .navbar-dark {
-      background-color: var(--wood) !important;
+    .btn-primary:hover {
+      background-color: var(--dark);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     }
     
     /* Footer */
     footer {
-      background-color: var(--wood);
+      background: linear-gradient(135deg, var(--dark), #1A252F);
+      color: white;
+      padding: 30px 0;
+      margin-top: 50px;
+    }
+    
+    footer h5 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+    
+    footer a {
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    footer a:hover {
+      color: var(--accent);
+      text-decoration: none;
+      transform: translateX(5px);
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .timeline {
+        padding-left: 30px;
+      }
+      
+      .timeline-year {
+        left: -30px;
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <i class="bi bi-building"></i> Perfect Moulds Investments
+          <i class="bi bi-building me-2"></i>Perfect Moulds Investments
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
@@ -116,17 +221,20 @@
     </nav>
   </header>
 
-  <main class="container my-5">
-    <h1 class="mb-4">ABOUT PERFECT MOULDS INVESTMENTS</h1>
+  <main class="container my-5 py-4">
+    <div class="text-center mb-5">
+      <h1 class="display-4">ABOUT PERFECT MOULDS INVESTMENTS</h1>
+      <p class="lead text-muted">Building Botswana's Future Since 2007</p>
+    </div>
     
-    <section class="mb-5">
-      <h2 class="mb-3">OUR JOURNEY</h2>
-      <p class="lead">Building Foundations, Empowering Communities</p>
-      <p>Established in 2007 Bobonong village, Perfect Moulds Investments has grown into a trusted supplier of high quality construction and building materials. We specialize in providing essential products such as pillars, various types of brick, lintels, paving slabs, and more, catering for both residential and commercial projects.</p>
+    <section class="mb-5 px-3">
+      <h2 class="mb-4">OUR JOURNEY</h2>
+      <p class="lead text-primary">Building Foundations, Empowering Communities</p>
+      <p>Established in 2007 in Bobonong village, Perfect Moulds Investments has grown into a trusted supplier of high quality construction and building materials. We specialize in providing essential products such as pillars, various types of brick, lintels, paving slabs, and more, catering for both residential and commercial projects.</p>
       
       <!-- Timeline Section -->
       <div class="mt-5">
-        <h4 class="text-center mb-4">Our Growth Timeline</h4>
+        <h3 class="text-center mb-4">Our Growth Timeline</h3>
         <ul class="timeline">
           <li class="timeline-item">
             <div class="timeline-year">2007</div>
@@ -167,67 +275,105 @@
       </div>
     </section>
 
-    <section class="mb-5">
-      <h2 class="mb-3">OUR MISSION</h2>
-      <p>To deliver durable, affordable, and reliable building solutions while supporting the growth of Bobonong and its surrounding villages. We take pride in contributing to local development by supplying materials that lay the foundation for stronger, safer and more sustainable structures.</p>
-    </section>
-
-    <section class="mb-5">
-      <h2 class="mb-3">WHY CHOOSE US?</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <ul class="list-group">
-            <li class="list-group-item d-flex align-items-center">
-              <i class="bi bi-check-circle-fill text-success me-3"></i>
-              <span>Wide range of products - From pillars to paving, we offer everything needed for construction and landscape.</span>
-            </li>
-            <li class="list-group-item d-flex align-items-center">
-              <i class="bi bi-check-circle-fill text-success me-3"></i>
-              <span>Local expertise - Over 17 years of serving Bobonong and neighboring communities.</span>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <ul class="list-group">
-            <li class="list-group-item d-flex align-items-center">
-              <i class="bi bi-check-circle-fill text-success me-3"></i>
-              <span>Quality and Trust - Committed to supplying materials that meet industry standards.</span>
-            </li>
-            <li class="list-group-item d-flex align-items-center">
-              <i class="bi bi-check-circle-fill text-success me-3"></i>
-              <span>Community focus - Proudly supporting local builders, contractors and home owners.</span>
-            </li>
-          </ul>
+    <section class="mb-5 px-3">
+      <h2 class="mb-4">OUR MISSION</h2>
+      <div class="card">
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p class="fs-4">"To deliver durable, affordable, and reliable building solutions while supporting the growth of Bobonong and its surrounding villages."</p>
+            <footer class="blockquote-footer mt-3">Founder, Perfect Moulds Investments</footer>
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <div class="card bg-light mt-5 border-primary">
-      <div class="card-body text-center">
-        <h4>Ready to start your project?</h4>
-        <a href="contact.html" class="btn btn-primary btn-lg mt-3">
-          <i class="bi bi-chat-dots"></i> Get a Quote Today
-        </a>
+    <section class="mb-5 px-3">
+      <h2 class="mb-4">WHY CHOOSE US?</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header">
+              <i class="bi bi-box-seam me-2"></i>Product Range
+            </div>
+            <div class="card-body">
+              <p>From pillars to paving, we offer everything needed for construction and landscape projects.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header">
+              <i class="bi bi-clock-history me-2"></i>Experience
+            </div>
+            <div class="card-body">
+              <p>Over 17 years of serving Bobonong and neighboring communities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header">
+              <i class="bi bi-check-circle me-2"></i>Quality
+            </div>
+            <div class="card-body">
+              <p>Committed to supplying materials that meet industry standards.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header">
+              <i class="bi bi-people me-2"></i>Community
+            </div>
+            <div class="card-body">
+              <p>Proudly supporting local builders, contractors and home owners.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="text-center mt-5 pt-4">
+      <div class="card border-primary">
+        <div class="card-body py-4">
+          <h3 class="mb-3">Ready to start your project?</h3>
+          <p class="lead mb-4">Let's build something great together</p>
+          <a href="contact.html" class="btn btn-primary btn-lg px-4">
+            <i class="bi bi-chat-dots me-2"></i>Get a Quote Today
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="bg-dark text-white py-3">
+  <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <h5>Contact Us</h5>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5>Perfect Moulds</h5>
+          <p>Building Botswana's future with quality materials since 2007.</p>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5>Quick Links</h5>
           <ul class="list-unstyled">
-            <li><i class="bi bi-telephone"></i> +267 75471050</li>
-            <li><i class="bi bi-phone"></i> +267 72182234</li>
-            <li><i class="bi bi-whatsapp"></i> 76343465</li>
-            <li><i class="bi bi-envelope"></i> info@perfectoinvestments.com</li>
+            <li><a href="index.html"><i class="bi bi-chevron-right me-1"></i> Home</a></li>
+            <li><a href="products.html"><i class="bi bi-chevron-right me-1"></i> Products</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right me-1"></i> Contact</a></li>
           </ul>
         </div>
-        <div class="col-md-6 text-md-end">
-          <p class="mb-0">&copy; 2025 Perfect Moulds Investments</p>
-          <p class="small">All rights reserved</p>
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-telephone me-2"></i> +267 75471050</li>
+            <li><i class="bi bi-phone me-2"></i> +267 72182234</li>
+            <li><i class="bi bi-whatsapp me-2"></i> 76343465</li>
+            <li><i class="bi bi-envelope me-2"></i> info@perfectoinvestments.com</li>
+          </ul>
         </div>
+      </div>
+      <hr class="mt-4 mb-3" style="border-color: rgba(255,255,255,0.1);">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 Perfect Moulds Investments. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -260,8 +406,3 @@
   </script>
 </body>
 </html>
-  
- 
-       
-
-     
