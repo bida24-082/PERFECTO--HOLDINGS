@@ -21,6 +21,9 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #333;
       background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     
     .navbar {
@@ -179,26 +182,46 @@
       font-weight: bold;
     }
     
-    /* Footer */
+    /* Footer - Updated to match other pages */
     footer {
       background-color: var(--dark-color) !important;
+      color: white;
       padding: 2rem 0;
-      margin-top: 4rem;
+      margin-top: auto;
+      border-top: 2px solid var(--accent-color);
     }
     
     footer h5 {
       color: var(--secondary-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+      display: inline-block;
       margin-bottom: 1.5rem;
     }
     
     footer a {
       color: white;
       transition: all 0.3s ease;
+      text-decoration: none;
     }
     
     footer a:hover {
       color: var(--accent-color);
-      text-decoration: none;
+      transform: translateX(5px);
+    }
+    
+    footer i {
+      margin-right: 0.5rem;
+      color: var(--secondary-color);
+    }
+    
+    .footer-links {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.5rem;
     }
     
     /* Responsive Adjustments */
@@ -213,6 +236,15 @@
       
       .dropdown-menu {
         width: 100%;
+      }
+      
+      footer {
+        text-align: center;
+      }
+      
+      footer h5 {
+        display: block;
+        text-align: center;
       }
     }
   </style>
@@ -259,7 +291,7 @@
     </nav>
   </header>
 
-  <main class="container my-5">
+  <main class="container my-5 flex-grow-1">
     <!-- Standalone Dropdown Section -->
     <div class="text-center">
       <div class="standalone-dropdown">
@@ -337,24 +369,25 @@
     </section>
   </main>
 
+  <!-- Updated Footer to match other pages -->
   <footer class="py-4">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-4 mb-md-0">
           <h5>Perfect Moulds</h5>
-          <p>Quality construction materials since 2007</p>
+          <p>Building Botswana's future with quality materials since 2007.</p>
         </div>
         <div class="col-md-4 mb-4 mb-md-0">
           <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="index.html" class="text-white"><i class="bi bi-chevron-right me-1"></i> Home</a></li>
-            <li><a href="products.html" class="text-white"><i class="bi bi-chevron-right me-1"></i> Products</a></li>
-            <li><a href="contact.html" class="text-white"><i class="bi bi-chevron-right me-1"></i> Contact</a></li>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right me-1"></i> Home</a></li>
+            <li><a href="products.html"><i class="bi bi-chevron-right me-1"></i> Products</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right me-1"></i> Contact</a></li>
           </ul>
         </div>
         <div class="col-md-4">
           <h5>Contact</h5>
-          <ul class="list-unstyled">
+          <ul class="footer-links">
             <li><i class="bi bi-geo-alt me-2"></i> Plot 59140, Bobonong</li>
             <li><i class="bi bi-telephone me-2"></i> +267 75471050</li>
             <li><i class="bi bi-envelope me-2"></i> info@perfectoinvestments.com</li>
@@ -389,23 +422,6 @@
         if (!event.target.closest('.standalone-dropdown')) {
           dropdownMenu.classList.remove('show-dropdown');
         }
-      });
-      
-      // Footer scroll behavior (matches other pages)
-      const footer = document.querySelector('footer');
-      let lastScrollPosition = 0;
-      
-      window.addEventListener('scroll', function() {
-        const currentScrollPosition = window.scrollY;
-        
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
-          footer.classList.add('show');
-        } 
-        else if (currentScrollPosition < lastScrollPosition) {
-          footer.classList.remove('show');
-        }
-        
-        lastScrollPosition = currentScrollPosition;
       });
     });
   </script>
