@@ -8,11 +8,153 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --accent-color: #e74c3c;
+      --light-color: #ecf0f1;
+      --dark-color: #2c3e50;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    
+    .navbar {
+      background-color: var(--primary-color) !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    
+    .hero-section {
+      background: linear-gradient(135deg, var(--light-color) 0%, #ffffff 100%);
+      padding: 3rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      margin-bottom: 4rem;
+    }
+    
+    .display-4 {
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .lead {
+      color: #555;
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    
+    .btn-primary {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background-color: #2980b9;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);
+    }
+    
+    .btn-outline-primary {
+      color: var(--secondary-color);
+      border-color: var(--secondary-color);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-outline-primary:hover {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+    
+    .about-section {
+      padding: 3rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .about-section h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+    }
+    
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .card-title {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+    
+    .list-group-item {
+      border-left: none;
+      border-right: none;
+    }
+    
+    .list-group-item:first-child {
+      border-top: none;
+    }
+    
+    footer {
+      background-color: var(--dark-color) !important;
+      padding: 2rem 0;
+    }
+    
+    footer h5 {
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+    
+    footer ul li {
+      margin-bottom: 0.5rem;
+    }
+    
+    footer i {
+      margin-right: 0.5rem;
+      color: var(--secondary-color);
+    }
+    
+    .img-fluid {
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section {
+        text-align: center;
+        padding: 2rem;
+      }
+      
+      .display-4 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">
           Perfect Moulds Investments
@@ -48,44 +190,14 @@
       <div class="row align-items-center">
         <div class="col-md-6">
           <h1 class="display-4 fw-bold">Quality Construction Products</h1>
-          <p class="lead">Premium pillars, paving slabs, and building materials for your projects</p>
-          <a href="products.html" class="btn btn-primary btn-lg">View Our Products</a>
+          <p class="lead">Premium pillars, paving slabs, and building materials for your projects. We provide durable solutions that stand the test of time.</p>
+          <div class="d-flex gap-3">
+            <a href="products.html" class="btn btn-primary btn-lg">View Our Products</a>
+            <a href="contact.html" class="btn btn-outline-primary btn-lg">Contact Us</a>
+          </div>
         </div>
         <div class="col-md-6">
-          <img src="rcc-railing-pillar.jpg" alt="Construction materials" class="img-fluid rounded">
-        </div>
-      </div>
-    </section>
-
-    <section class="products-section mb-5">
-      <h2 class="text-center mb-4">Our Products</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="rcc-railing-pillar.jpg" class="card-img-top" alt="Concrete pillars">
-            <div class="card-body">
-              <h5 class="card-title">Pillars</h5>
-              <p class="card-text">Strong, durable pillars for all construction needs.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="download.jpg" class="card-img-top" alt="Paving slabs">
-            <div class="card-body">
-              <h5 class="card-title">Paving Slabs</h5>
-              <p class="card-text">High-quality paving solutions for any landscape.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="rcc-railing-pillar.jpg" class="card-img-top" alt="Window seals">
-            <div class="card-body">
-              <h5 class="card-title">Window Seals</h5>
-              <p class="card-text">Premium sealing solutions for windows and doors.</p>
-            </div>
-          </div>
+          <img src="rcc-railing-pillar.jpg" alt="Construction materials" class="img-fluid">
         </div>
       </div>
     </section>
@@ -94,7 +206,8 @@
       <div class="row">
         <div class="col-md-6">
           <h2>About Our Company</h2>
-          <p>Perfect Moulds Investments has been providing quality construction products since 2010. We specialize in manufacturing durable building materials that stand the test of time.</p>
+          <p class="mb-4">Perfect Moulds Investments has been providing quality construction products since 2010. We specialize in manufacturing durable building materials that stand the test of time. Our commitment to excellence has made us a trusted partner for builders and contractors throughout the region.</p>
+          <p class="mb-4">With our state-of-the-art manufacturing facility and experienced team, we deliver products that meet the highest standards of quality and durability.</p>
           <a href="about.html" class="btn btn-outline-primary">Learn More About Us</a>
         </div>
         <div class="col-md-6">
@@ -102,10 +215,26 @@
             <div class="card-body">
               <h5 class="card-title">Why Choose Us?</h5>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Premium quality materials</li>
-                <li class="list-group-item">Competitive pricing</li>
-                <li class="list-group-item">Reliable delivery</li>
-                <li class="list-group-item">Expert advice</li>
+                <li class="list-group-item d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Premium quality materials
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Competitive pricing
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Reliable delivery
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Expert advice
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Custom solutions
+                </li>
               </ul>
             </div>
           </div>
@@ -114,22 +243,31 @@
     </section>
   </main>
 
-  <footer class="bg-dark text-white py-3">
+  <footer class="py-4">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 mb-4 mb-md-0">
           <h5>Contact Us</h5>
           <ul class="list-unstyled">
-            <li><i class="bi bi-telephone"></i> +267 75471050</li>
-            <li><i class="bi bi-phone"></i> +267 72182234</li>
-            <li><i class="bi bi-whatsapp"></i> 76343465</li>
-            <li><i class="bi bi-envelope"></i> info@perfectoinvestments.com</li>
+            <li class="mb-2"><i class="bi bi-telephone"></i> +267 75471050</li>
+            <li class="mb-2"><i class="bi bi-phone"></i> +267 72182234</li>
+            <li class="mb-2"><i class="bi bi-whatsapp"></i> +267 76343465</li>
+            <li class="mb-2"><i class="bi bi-envelope"></i> info@perfectoinvestments.com</li>
+            <li><i class="bi bi-geo-alt"></i> Plot 59140, Bobonong, Botswana</li>
           </ul>
         </div>
         <div class="col-md-6 text-md-end">
-          <p class="mb-0">&copy; 2025 Perfect Moulds Investments</p>
-          <p class="small">All rights reserved</p>
+          <h5>Business Hours</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">Monday - Friday: 7:30 AM - 5:00 PM</li>
+            <li class="mb-2">Saturday: 8:00 AM - 1:00 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
         </div>
+      </div>
+      <hr class="my-4">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 Perfect Moulds Investments. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -138,27 +276,17 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
   
-  <!-- Footer Scroll Script -->
+  <!-- Smooth scrolling for anchor links -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const footer = document.querySelector('footer');
-      let lastScrollPosition = 0;
-      
-      window.addEventListener('scroll', function() {
-        const currentScrollPosition = window.scrollY;
-        
-        // Show footer when scrolling down near bottom
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
-          footer.classList.add('show');
-        } 
-        // Hide footer when scrolling up
-        else if (currentScrollPosition < lastScrollPosition) {
-          footer.classList.remove('show');
-        }
-        
-        lastScrollPosition = currentScrollPosition;
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
       });
     });
   </script>
 </body>
 </html>
+ 
